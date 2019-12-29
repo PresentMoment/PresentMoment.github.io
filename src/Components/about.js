@@ -4,13 +4,13 @@ export default function About() {
   return (
     <div className="about">
       <p>
-        Hi. My name is Robert and I am a front end javascript developer,
-        specializing in writing clean, maintainable code. Before beginning my
-        career as a developer, I worked as a location manager and scout in the
-        film industry. In that job communication, creativity and attention to
-        detail were the lynchpins of carrying out successful projects I and
-        enjoy bringing those skills to bear in collaborative projects and dev
-        teams.
+        I'm Robert, a front end javascript developer focusing on the React
+        ecosystem. Before beginning my career as a developer, I worked as a
+        location manager and scout in the film industry. In that job
+        communication was the lynchpin of a success. I believe communication is
+        still paramount in my current field, both within dev teams and in the
+        writing of clean, readable code. Click around to see what I've been up
+        to, and how to contact me.
       </p>
     </div>
   );

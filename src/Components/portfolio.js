@@ -7,10 +7,18 @@ import simma from "../images/simma.png";
 import deed from "../images/deed.png";
 import finn from "../images/finn.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faExternalLinkAlt);
+
 export default function Portfolio() {
   const [image, setImage] = useState();
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
+  const [gitLink, setGitLink] = useState("");
 
   return (
     <div className="portfolio">
@@ -33,6 +41,7 @@ export default function Portfolio() {
               setDescription(
                 "Admin and contributor for experimental, JavaScript based imaging platform."
               );
+              setGitLink("https://github.com/Anthromes");
             }}
           >
             Anthromes
@@ -44,6 +53,7 @@ export default function Portfolio() {
                 "A RESTful, location based app for users to find public sculpture near them and post public sculptures they find in the world. Built with Handlebars, Express and MongoDB."
               );
               setLink("https://materialism.herokuapp.com/");
+              setGitLink("https://github.com/PresentMoment/Material");
             }}
           >
             Material
@@ -55,6 +65,7 @@ export default function Portfolio() {
                 "Fully responsive, SPA portfolio site built with React and CSS"
               );
               setLink("http://robertgirardin.net/");
+              setGitLink("https://github.com/PresentMoment/creative-portfolio");
             }}
           >
             robertgirardin.net
@@ -66,6 +77,7 @@ export default function Portfolio() {
                 "A spatial, sound exploration tool built with React and Tone.JS"
               );
               setLink("http://simma.herokuapp.com/");
+              setGitLink("https://github.com/PresentMoment/simma");
             }}
           >
             Simma
@@ -75,6 +87,9 @@ export default function Portfolio() {
               setImage(finn);
               setDescription("Using Tone.JS to 'auralize' financial data");
               setLink("https://presentmoment.github.io/Financial-Auralizer/");
+              setGitLink(
+                "https://github.com/PresentMoment/Financial-Auralizer"
+              );
             }}
           >
             Financial Auralizer
@@ -86,6 +101,7 @@ export default function Portfolio() {
                 "An educational tool to learn about just intonation. Built with P5 and Tone.JS"
               );
               setLink("https://presentmoment.github.io/Just/");
+              setGitLink("https://github.com/PresentMoment/Just");
             }}
           >
             Just Intonation
@@ -97,7 +113,24 @@ export default function Portfolio() {
           <img src={image} alt="" width="100%" />
         </a>
       </div>
-      <div className="portfolioDesc">{description}</div>
+      <div className="portfolioDesc">
+        {description}{" "}
+        {description ? (
+          <>
+            <div className="portfolioSpacer" />
+            <div className="portfolioIcon">
+              <a target="_blank" rel="noopener noreferrer" href={link}>
+                <FontAwesomeIcon icon={faExternalLinkAlt} color="gray" />
+              </a>
+              {gitLink ? (
+                <a target="_blank" rel="noopener noreferrer" href={gitLink}>
+                  <FontAwesomeIcon icon={["fab", "github"]} color="gray" />
+                </a>
+              ) : null}
+            </div>
+          </>
+        ) : null}
+      </div>
     </div>
   );
 }

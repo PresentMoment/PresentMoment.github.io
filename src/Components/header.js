@@ -29,7 +29,7 @@ export default function Header() {
               setPortfolio(false);
               setResume(false);
             }}
-            className={about ? "underline" : undefined}
+            className={about ? "overline" : undefined}
           >
             About
           </h1>
@@ -40,7 +40,7 @@ export default function Header() {
               setAbout(false);
               setResume(false);
             }}
-            className={portfolio ? "underline" : undefined}
+            className={portfolio ? "overline" : undefined}
           >
             Portfolio
           </h1>
@@ -51,7 +51,7 @@ export default function Header() {
               setAbout(false);
               setPortfolio(false);
             }}
-            className={resume ? "underline" : undefined}
+            className={resume ? "overline" : undefined}
           >
             Resume
           </h1>
@@ -62,7 +62,7 @@ export default function Header() {
               setPortfolio(false);
               setResume(false);
             }}
-            className={contact ? "underline" : undefined}
+            className={contact ? "overline" : undefined}
           >
             Contact
           </h1>

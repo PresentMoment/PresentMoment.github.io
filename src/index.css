@@ -10,7 +10,7 @@ body {
   font-size: 20px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   body {
     font-size: 14px;
   }
@@ -32,7 +32,7 @@ body {
   cursor: pointer;
 }
 
-.underline {
+.overline {
   text-decoration: overline;
 }
 
@@ -47,71 +47,78 @@ body {
 .portfolio {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 699px) {
   .portfolio {
-    display: flex;
     flex-direction: column;
   }
 }
 
 .portfolioLinks {
-  flex-direction: "column";
-  flex-grow: 1;
-  width: 33%;
+  flex-direction: column;
+  flex: 1 1 282px;
   cursor: pointer;
 }
-@media screen and (max-width: 750px) and (min-width: 451px) {
+@media screen and (max-width: 500px) {
   .portfolioLinks {
-    width: 20%;
-  }
-}
-@media screen and (max-width: 450px) {
-  .portfolioLinks {
-    width: 100%;
+    flex-basis: 220px;
   }
 }
 
 .portfolioImages {
-  flex-direction: "column";
-  flex-grow: 1;
-  width: 25%;
-}
-@media screen and (max-width: 450px) {
-  .portfolioImages {
-    width: 100%;
-    margin: 0 auto;
-  }
+  flex: 1 1 282px;
+  margin-left: 0.5em;
 }
 
 .portfolioDesc {
-  flex-direction: "column";
-  flex-grow: 1;
-  width: 24%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 3 282px;
   margin-left: 5px;
 }
-@media screen and (max-width: 450px) {
-  .portfolioDesc {
-    width: 100%;
-    margin: 0 auto;
-  }
+
+.portfolioSpacer {
+  flex: 1;
+}
+
+.portfolioIcon {
+  display: flex;
+  margin-top: 2em;
+  margin-right: 1em;
+  justify-content: space-between;
 }
 
 .spacer {
   width: 100%;
   height: 7em;
 }
+@media screen and (max-width: 500px) {
+  .spacer {
+    height: 6vh;
+  }
+}
 
 .container {
   margin: 1em 2em;
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .container {
+    margin-left: 0.5em;
+  }
+}
+
+.resume {
+  margin: 2vh 0 0 1vw;
 }
 
 h1 {
   font-size: 26px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 14px;
   }
@@ -120,9 +127,4 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

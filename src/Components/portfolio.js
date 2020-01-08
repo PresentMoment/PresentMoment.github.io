@@ -8,6 +8,8 @@ import deed from "../images/deed.png";
 import finn from "../images/finn.png";
 import anthromes from "../images/anthromes.png";
 
+import { MoonLoader } from "react-spinners";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -20,6 +22,7 @@ export default function Portfolio() {
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
   const [gitLink, setGitLink] = useState("");
+  const [imgLoaded, setLoading] = useState(true);
 
   return (
     <div className="portfolio">
@@ -113,7 +116,15 @@ export default function Portfolio() {
       </div>
       <div className="portfolioImages">
         <a target="_blank" rel="noopener noreferrer" href={link}>
-          <img src={image} alt="" width="100%" />
+          {image ? (
+            <MoonLoader loading={imgLoaded} css={"margin: 0 auto; top: 50%;"} />
+          ) : null}
+          <img
+            src={image}
+            alt=""
+            width="100%"
+            onLoad={() => setLoading(false)}
+          />
         </a>
       </div>
 

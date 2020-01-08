@@ -21,7 +21,7 @@ export default function contact() {
       </span>
       <br />
       <span>
-        <a href="tel:+49 1762930116">tel: +49 1762930116</a>
+        <a href="tel:+39 3516792256">tel: +39 3516792256</a>
       </span>
       <br />
       <span>

@@ -6,7 +6,7 @@ export default function Resume() {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://drive.google.com/open?id=16sGO8U7yC3cQ_sC5-kLow0AnValXIygt"
+        href="https://drive.google.com/open?id=1RHuVMrwOMYMmlD6GKeUXIfaWoavUDiBh"
       >
         Resume.pdf
       </a>

@@ -6,6 +6,7 @@ import material from "../images/material.png";
 import simma from "../images/simma.png";
 import deed from "../images/deed.png";
 import finn from "../images/finn.png";
+import anthromes from "../images/anthromes.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -31,20 +32,10 @@ export default function Portfolio() {
                 "Working as a Junior Developer to help launch multi-platform, international website. From design mockups in Storybooks to engineering components in React and React Native, to tying everything to the Node.JS backend.  Utilizing TypeScript superset throughout."
               );
               setLink("https://www.thedeed.app/");
+              setGitLink("");
             }}
           >
             The Deed
-          </li>
-          <li
-            onClick={() => {
-              setImage(artist);
-              setDescription(
-                "Admin and contributor for experimental, JavaScript based imaging platform."
-              );
-              setGitLink("https://github.com/Anthromes");
-            }}
-          >
-            Anthromes
           </li>
           <li
             onClick={() => {
@@ -106,6 +97,18 @@ export default function Portfolio() {
           >
             Just Intonation
           </li>
+          <li
+            onClick={() => {
+              setImage(anthromes);
+              setDescription(
+                "Admin and contributor for experimental, JavaScript based imaging platform."
+              );
+              setLink("");
+              setGitLink("https://github.com/Anthromes");
+            }}
+          >
+            Anthromes
+          </li>
         </ul>
       </div>
       <div className="portfolioImages">
@@ -113,15 +116,18 @@ export default function Portfolio() {
           <img src={image} alt="" width="100%" />
         </a>
       </div>
+
       <div className="portfolioDesc">
         {description}{" "}
         {description ? (
           <>
             <div className="portfolioSpacer" />
             <div className="portfolioIcon">
-              <a target="_blank" rel="noopener noreferrer" href={link}>
-                <FontAwesomeIcon icon={faExternalLinkAlt} color="gray" />
-              </a>
+              {link ? (
+                <a target="_blank" rel="noopener noreferrer" href={link}>
+                  <FontAwesomeIcon icon={faExternalLinkAlt} color="gray" />
+                </a>
+              ) : null}
               {gitLink ? (
                 <a target="_blank" rel="noopener noreferrer" href={gitLink}>
                   <FontAwesomeIcon icon={["fab", "github"]} color="gray" />

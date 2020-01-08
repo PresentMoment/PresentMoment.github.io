@@ -11,18 +11,31 @@ export default function Header() {
   const [portfolio, setPortfolio] = useState(false);
   const [contact, setContact] = useState(false);
   const [resume, setResume] = useState(false);
+  const [mouseTarget, setTarget] = useState("");
+  const [hovered, setHovered] = useState(false);
 
   const toggleAbout = () => setAbout(!about);
   const togglePortfolio = () => setPortfolio(!portfolio);
   const toggleContact = () => setContact(!contact);
   const toggleResume = () => setResume(!resume);
 
+  const underline = hovered ? { textDecoration: "underline" } : null;
+
   return (
     <>
       <div className="header">
         <h1>Robert Girardin | Front End Developer</h1>
         <div className="links">
-          <h1
+          <div
+            style={mouseTarget === "about" && !about ? underline : null}
+            onMouseEnter={e => {
+              setTarget(e.currentTarget.id);
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setTarget("");
+              setHovered(false);
+            }}
             onClick={() => {
               toggleAbout();
               setContact(false);
@@ -30,10 +43,20 @@ export default function Header() {
               setResume(false);
             }}
             className={about ? "overline" : undefined}
+            id="about"
           >
-            About
-          </h1>
-          <h1
+            <h1>About</h1>
+          </div>
+          <div
+            style={mouseTarget === "portfolio" && !portfolio ? underline : null}
+            onMouseEnter={e => {
+              setTarget(e.currentTarget.id);
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setTarget("");
+              setHovered(false);
+            }}
             onClick={() => {
               togglePortfolio();
               setContact(false);
@@ -41,10 +64,20 @@ export default function Header() {
               setResume(false);
             }}
             className={portfolio ? "overline" : undefined}
+            id="portfolio"
           >
-            Portfolio
-          </h1>
-          <h1
+            <h1>Portfolio</h1>
+          </div>
+          <div
+            style={mouseTarget === "resume" && !resume ? underline : null}
+            onMouseEnter={e => {
+              setTarget(e.currentTarget.id);
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setTarget("");
+              setHovered(false);
+            }}
             onClick={() => {
               toggleResume();
               setContact(false);
@@ -52,10 +85,20 @@ export default function Header() {
               setPortfolio(false);
             }}
             className={resume ? "overline" : undefined}
+            id="resume"
           >
-            Resume
-          </h1>
-          <h1
+            <h1>Resume</h1>
+          </div>
+          <div
+            style={mouseTarget === "contact" && !contact ? underline : null}
+            onMouseEnter={e => {
+              setTarget(e.currentTarget.id);
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setTarget("");
+              setHovered(false);
+            }}
             onClick={() => {
               toggleContact();
               setAbout(false);
@@ -63,9 +106,10 @@ export default function Header() {
               setResume(false);
             }}
             className={contact ? "overline" : undefined}
+            id="contact"
           >
-            Contact
-          </h1>
+            <h1>Contact</h1>
+          </div>
         </div>
       </div>
       <div className="spacer" />

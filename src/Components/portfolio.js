@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
-import artist from "../images/artist.png";
-import just from "../images/just.png";
-import material from "../images/material.png";
-import simma from "../images/simma.png";
-import deed from "../images/deed.png";
-import finn from "../images/finn.png";
-import anthromes from "../images/anthromes.png";
+import portfolioItems from "./portfolioItems";
 
 import { MoonLoader } from "react-spinners";
 
@@ -28,90 +22,19 @@ export default function Portfolio() {
     <div className="portfolio">
       <div className="portfolioLinks">
         <ul>
-          <li
-            onClick={() => {
-              setImage(deed);
-              setDescription(
-                "Working as a Junior Developer to help launch multi-platform, international website. From design mockups in Storybooks to engineering components in React and React Native, to tying everything to the Node.JS backend.  Utilizing TypeScript superset throughout."
-              );
-              setLink("https://www.thedeed.app/");
-              setGitLink("");
-            }}
-          >
-            The Deed
-          </li>
-          <li
-            onClick={() => {
-              setImage(material);
-              setDescription(
-                "A RESTful, location based app for users to find public sculpture near them and post public sculptures they find in the world. Built with Handlebars, Express and MongoDB."
-              );
-              setLink("https://materialism.herokuapp.com/");
-              setGitLink("https://github.com/PresentMoment/Material");
-            }}
-          >
-            Material
-          </li>
-          <li
-            onClick={() => {
-              setImage(artist);
-              setDescription(
-                "Fully responsive, SPA portfolio site built with React and CSS"
-              );
-              setLink("http://robertgirardin.net/");
-              setGitLink("https://github.com/PresentMoment/creative-portfolio");
-            }}
-          >
-            robertgirardin.net
-          </li>
-          <li
-            onClick={() => {
-              setImage(simma);
-              setDescription(
-                "A spatial, sound exploration tool built with React and Tone.JS"
-              );
-              setLink("http://simma.herokuapp.com/");
-              setGitLink("https://github.com/PresentMoment/simma");
-            }}
-          >
-            Simma
-          </li>
-          <li
-            onClick={() => {
-              setImage(finn);
-              setDescription("Using Tone.JS to 'auralize' financial data");
-              setLink("https://presentmoment.github.io/Financial-Auralizer/");
-              setGitLink(
-                "https://github.com/PresentMoment/Financial-Auralizer"
-              );
-            }}
-          >
-            Financial Auralizer
-          </li>
-          <li
-            onClick={() => {
-              setImage(just);
-              setDescription(
-                "An educational tool to learn about just intonation. Built with P5 and Tone.JS"
-              );
-              setLink("https://presentmoment.github.io/Just/");
-              setGitLink("https://github.com/PresentMoment/Just");
-            }}
-          >
-            Just Intonation
-          </li>
-          <li
-            onClick={() => {
-              setImage(anthromes);
-              setDescription(
-                "Admin and contributor for experimental, JavaScript based imaging platform."
-              );
-              setLink("");
-              setGitLink("https://github.com/Anthromes");
-            }}
-          >
-            Anthromes
-          </li>
+          {Object.values(portfolioItems).map((item, i) => (
+            <li
+              key={i}
+              onClick={() => {
+                setDescription(item.description);
+                setLink(item.link);
+                setGitLink(item.gitLink);
+                setImage(item.image);
+              }}
+            >
+              {item.name}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="portfolioImages">

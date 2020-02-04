@@ -63,6 +63,7 @@ body {
 @media screen and (max-width: 699px) {
   .portfolio {
     flex-direction: column;
+    display: unset;
   }
 }
 

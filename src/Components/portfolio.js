@@ -3,12 +3,10 @@ import React, { useState } from "react";
 import portfolioItems from "./portfolioItems";
 
 import { MoonLoader } from "react-spinners";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-
 library.add(fab, faExternalLinkAlt);
 
 export default function Portfolio() {

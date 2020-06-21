@@ -5,6 +5,7 @@ import simma from "../images/simma.png";
 import deed from "../images/deed.png";
 import finn from "../images/finn.png";
 import anthromes from "../images/anthromes.png";
+import mmxx from "../images/mmxx.png";
 
 const portfolioItems = {
   deed: {
@@ -13,7 +14,7 @@ const portfolioItems = {
       "Working as a Junior Developer to help launch multi-platform, international website. From design mockups in Storybooks to engineering components in React and React Native, to tying everything to the Node.JS backend.  Utilizing TypeScript superset throughout.",
     link: "https://www.thedeed.app/",
     gitLink: "",
-    image: deed
+    image: deed,
   },
 
   material: {
@@ -22,7 +23,7 @@ const portfolioItems = {
       "A RESTful, location based app for users to find public sculpture near them and post public sculptures they find in the world. Built with Handlebars, Express and MongoDB.",
     link: "https://materialism.herokuapp.com/",
     gitLink: "https://github.com/PresentMoment/Material",
-    image: material
+    image: material,
   },
   robertgirardin: {
     name: "robertgirardin.net",
@@ -30,7 +31,7 @@ const portfolioItems = {
       "Fully responsive, SPA portfolio site built with React and CSS.",
     link: "http://robertgirardin.net/",
     gitLink: "https://github.com/PresentMoment/creative-portfolio",
-    image: artist
+    image: artist,
   },
   simma: {
     name: "Simma",
@@ -38,14 +39,20 @@ const portfolioItems = {
       "A spatial, sound exploration tool built with React and Tone.JS",
     link: "http://simma.herokuapp.com/",
     gitLink: "https://github.com/PresentMoment/simma",
-    image: simma
+    image: simma,
+  },
+  mmxx: {
+    name: "MMXX",
+    description: "A website for Milanese gallery MMXX, built with React",
+    link: "http://mmxx.uno/",
+    image: mmxx,
   },
   financialAuralizer: {
     name: "Financial Auralizer",
     description: "Using Tone.JS to 'auralize' financial data",
     link: "https://presentmoment.github.io/Financial-Auralizer/",
     gitLink: "https://github.com/PresentMoment/Financial-Auralizer",
-    image: finn
+    image: finn,
   },
   justIntonation: {
     name: "Just Intonation",
@@ -53,7 +60,7 @@ const portfolioItems = {
       "An educational tool to learn about just intonation. Built with P5 and Tone.JS",
     link: "https://presentmoment.github.io/Just/",
     gitLink: "https://github.com/PresentMoment/Just",
-    image: just
+    image: just,
   },
   Anthromes: {
     name: "Anthromes",
@@ -61,8 +68,8 @@ const portfolioItems = {
       "Admin and contributor for experimental, JavaScript based imaging platform.",
     link: "",
     gitLink: "https://github.com/Anthromes",
-    image: anthromes
-  }
+    image: anthromes,
+  },
 };
 
 export default portfolioItems;

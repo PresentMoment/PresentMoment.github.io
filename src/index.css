@@ -32,8 +32,8 @@ body {
   cursor: pointer;
 }
 
-.overline {
-  text-decoration: overline;
+.linkItem:hover {
+  text-decoration: underline;
 }
 
 .contact {
@@ -79,6 +79,15 @@ body {
   }
 }
 
+.portfolioLink:hover {
+  text-decoration: underline;
+}
+.visitingLink {
+  color: rgb(184, 184, 184);
+  text-decoration: underline;
+  text-decoration-color: rgb(184, 184, 184);
+}
+
 .portfolioImages {
   display: flex;
   flex: 3 1 282px;
@@ -109,8 +118,6 @@ body {
 
 .portfolioIcon {
   display: flex;
-  margin-top: 2em;
-  margin-right: 1em;
   justify-content: space-between;
 }
 

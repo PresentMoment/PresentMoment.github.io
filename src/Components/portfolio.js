@@ -10,11 +10,12 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, faExternalLinkAlt);
 
 export default function Portfolio() {
-  const [image, setImage] = useState();
+  const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
   const [gitLink, setGitLink] = useState("");
   const [imgLoaded, setLoading] = useState(true);
+  const [currentProject, setCurrentProject] = useState("");
 
   return (
     <div className="portfolio">
@@ -22,12 +23,17 @@ export default function Portfolio() {
         <ul>
           {Object.values(portfolioItems).map((item, i) => (
             <li
+              id={item.name}
+              className={
+                currentProject === item.name ? "visitingLink" : "portfolioLink"
+              }
               key={i}
               onClick={() => {
                 setDescription(item.description);
                 setLink(item.link);
                 setGitLink(item.gitLink);
                 setImage(item.image);
+                setCurrentProject(item.name);
               }}
             >
               {item.name}

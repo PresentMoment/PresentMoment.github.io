@@ -4,7 +4,7 @@ import material from "../images/material.png";
 import simma from "../images/simma.png";
 import deed from "../images/deed.png";
 import finn from "../images/finn.png";
-import anthromes from "../images/anthromes.png";
+import promenade from "../images/promenade.png";
 import mmxx from "../images/mmxx.png";
 
 const portfolioItems = {
@@ -63,12 +63,10 @@ const portfolioItems = {
     image: just,
   },
   Anthromes: {
-    name: "Anthromes",
-    description:
-      "Admin and contributor for experimental, JavaScript based imaging platform.",
-    link: "",
-    gitLink: "https://github.com/Anthromes",
-    image: anthromes,
+    name: "Promenade",
+    description: "Promotional site for record on Hundebiss Records",
+    link: "https://presentmoment.github.io/promenade/",
+    image: promenade,
   },
 };
 
